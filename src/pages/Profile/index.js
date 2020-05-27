@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 
 /* 
-    房屋列表
+    我的(个人中心)页面
 */
 
-class HouseList extends Component {
+class Profile extends Component {
     render() {
         return (
             <div>
-                House page!
+                Profile page!
             </div>
         )
     }
 }
 
-export default HouseList
+export default Profile
