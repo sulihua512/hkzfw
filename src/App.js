@@ -1,10 +1,28 @@
 import React from 'react';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import HouseList from './pages/HouseList';
+import Map from './pages/Map';
+import NotFound from './pages/Nofound';
 
 
 function App() {
   return (
     <div className="App">
-      初始化
+      <Router>
+        <div className="nav">
+          <Link to="/home">Home</Link>
+          <Link to="/house">House</Link>
+          <Link to="/map">Map</Link>
+        </div>
+
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/house" component={HouseList} />
+          <Route path="/map" component={Map} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
     </div>
   );
 }
